@@ -8,4 +8,4 @@ Rešitev:
 Spletna aplikacija za pomoč pri tehnični podpori. Namenjena je trem različnim vlogam:
  - Stranka: Lahko vnese zahtevo za podpora, kjer poda opis napake. Ko je problem rešen, ga potrdi (da je rešen). Lahko ponovno odpre incident iz zgodovine (če se napaka ponovi).
  - Prvi nivo podpore: Lahko vnese opis napake, v primeru da stranka kliče. Pregleda nove zahtevke in poskuša podati rešitev. Prav tako lahko stanko prosi za dodatne podatke.
- - Strokovnjaki (drugi nivo podpore): V kolikor problema ne reši prvi nivo podpore, se zahtevku poviša prioriteta in ga poskuša rešiti strokovnjak. Zoper lahko strokovnjak prosi za dodatne informacije stranko.
+ - Strokovnjaki (drugi nivo podpore): V kolikor problema ne reši prvi nivo podpore, se zahtevku poviša prioriteta in ga poskuša rešiti strokovnjak. Zopet lahko strokovnjak prosi za dodatne informacije stranko.
