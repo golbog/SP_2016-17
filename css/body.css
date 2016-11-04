@@ -1,0 +1,13 @@
+/* ELEMENT CMS - GENERAL CSS */
+html, body, input, textarea {font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;}
+table { font-size:1em; border-spacing: 0;  border-collapse: collapse;}
+
+/*//////////////////////////////////////////////////////////////////////// global ///////////////////////////////////////////////////////////////////////////////*/
+div {
+    vertical-align: top;
+}
+
+/* ------------------------------------------------------------------- noga -------------------------------------------------------------*/
+.foot1, .foot2, .foot3 { display:inline-block; width:25%; padding: 15px}
+.foot2 { width:39%;}
+.footer-nav {list-style-type: none; margin-bottom: 5px}
