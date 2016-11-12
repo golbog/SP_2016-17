@@ -6,8 +6,157 @@ table { font-size:1em; border-spacing: 0;  border-collapse: collapse;}
 div {
     vertical-align: top;
 }
+a {
+	transition-duration: 0.3s;
+}
 
-/* ------------------------------------------------------------------- noga -------------------------------------------------------------*/
-.foot1, .foot2, .foot3 { display:inline-block; width:25%; padding: 15px}
-.foot2 { width:39%;}
-.footer-nav {list-style-type: none; margin-bottom: 5px}
+/* ------------------------------------------------------------------- header -------------------------------------------------------------*/
+header.site-header h1 {
+	color:inherit;
+	display:inline-block; 
+}
+
+/* ------------------------------------------------------------------- nav -------------------------------------------------------------*/
+/* Remove margins and padding from the list, and add a black background color */
+ul.top-nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+ul.top-nav li {float: left;}
+
+/* Style the links inside the list items */
+ul.top-nav li a {
+    display: inline-block;
+    border-right: 1px solid white;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change background color of links on hover */
+ul.top-nav li a.active {background-color: blue;}
+
+/* Change background color of links on hover */
+ul.top-nav li a:hover {background-color: #555;}
+
+/* Hide the list item that contains the link that should open and close the top-nav on small screens */
+ul.top-nav li.icon {display: none;}
+
+/* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the top-nav (li.icon) */
+@media screen and (max-width:680px) {
+  ul.top-nav li:not(:first-child) {display: none;}
+  ul.top-nav li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+/* The "responsive" class is added to the top-nav with JavaScript when the user clicks on the icon. This class makes the top-nav look good on small screens */
+@media screen and (max-width:680px) {
+  ul.top-nav.responsive {position: relative;}
+  ul.top-nav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.top-nav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.top-nav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
+
+/* ------------------------------------------------------------------- body -------------------------------------------------------------*/
+.centered-content {
+  max-width:960px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.main {
+  padding: 15px;
+}
+
+div.card {
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+div.card-header {
+    padding: 10px;
+    border-bottom: 1px solid gray;
+}
+div.card-container {
+    padding: 10px;
+}
+
+a.normal-button:link, a.normal-button:visited {
+    background-color: blue;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+a.normal-button:hover, a.normal-button:active {
+    background-color: gray;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+/* ------------------------------------------------------------------- footer -------------------------------------------------------------*/
+footer.site-footer {
+	color: #f2f2f2;
+ 	background-color: #333;
+}
+
+ul.footer-nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;}
+
+ul.footer-nav li a {
+    display: block;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color on hover */
+ul.footer-nav li a:hover {
+    background-color: #555;
+    color: white;
+}
+
+ul.footer-nav li a.active {
+    background-color: blue;
+}
+
+.foot1, .foot3 { 
+	display:inline-block; 
+	width:25%; 
+	padding: 15px;
+}
+.foot2 { 
+	display:inline-block; 
+	width:39%;
+}
+@media screen and (max-width:680px) {
+	.foot1, .foot3 { 
+		display:inline-block; 
+		width:40%; 
+		padding: 15px;
+	}
+	.foot2 { 
+		display:inline-block; 
+	  	width:0%;
+	}
+}
