@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <title>Tech support</title>
+      <meta name="description" content="Spletno programiranje project">
+      <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+      <meta name="author" content="Bogdan Golobič">
+      <link rel="stylesheet" href="css/body.css?v=1.0">
+      <link rel="stylesheet" href="css/analytics-widget.css?v=1.0">
+      <script id="responsiveDesign" src="javascript/responsive.js?v=1.0"></script>
+      <script id="analyticsWidget" src="javascript/analytics-widget.js?v=1.0" defer></script>
+   </head>
+   <body>
+      <header class="site-header">
+         <a href="dashboard.html"><img class="img-header" src="media/logo.svg" alt="logo"/></a>
+         <h1>Rajmund Tech Support</h1>
+      </header>
+      <nav>
+         <ul class="top-nav" id="myTopnav">
+            <li><a class="active" href="dashboard.html">Home</a></li>
+            <li><a href="ticket.html">Create ticket</a></li>
+            <li class="logout"><a href="login.html">Log out</a></li>
+            <li class="icon">
+               <a href="javascript:void(0);" style="font-size:15px;" onclick="topnavResponsive()">&#9776;</a>
+            </li>
+         </ul>
+      </nav>
+      <article class="main centered-content">
+         <div class="card">
+            <div class="card-header">
+               <h2>Reopen old request</h2>
+            </div>
+            <div class="card-container">
+               <p>Type in request number to reopen a ticket.</p>
+               <form method="POST" action="ticketInfo.html">
+                  <label>Ticket number: <input type="text" name="reqNum" placeholder="0123456789" pattern="^[0-9]*$" title="Request number" required /></label>
+                  <br>
+                  <input class="button submit-button" type="submit" value="Reopen" />
+               </form>
+            </div>
+         </div>
+      </article>
+      <article class="main centered-content">
+         <div class="card">
+            <div class="card-header">
+               <h2>Ticket history</h2>
+            </div>
+            <div class="card-container">
+               <div class="ticket-short">
+                  <div class="ticket-leftside">
+                     <span class="ticketId"><a href="ticketInfo.html">#1231413</a></span>
+                     <span class="ticketOwner">John Smith</span>
+                     <span class="ticketDate">21.11.2016</span>
+                  </div>
+                  <div class="ticket-rightside">
+                     <span class="ticketLvl">Tech lvl 1</span>
+                     <span class="ticketStatus-closed">Closed</span>  
+                  </div>
+               </div>
+               <div class="ticket-short">
+                  <div class="ticket-leftside">
+                     <span class="ticketId"><a href="ticketInfo.html">#1231412</a></span>
+                     <span class="ticketOwner">Tim Horton</span>
+                     <span class="ticketDate">19.11.2016</span>
+                  </div>
+                  <div class="ticket-rightside">
+                     <span class="ticketLvl">Tech lvl 2</span>
+                     <span class="ticketStatus-opened">Opened</span>  
+                  </div>
+               </div>
+               <div class="ticket-short">
+                  <div class="ticket-leftside">
+                     <span class="ticketId"><a href="ticketInfo.html">#1231423</a></span>
+                     <span class="ticketOwner">Ana Smith</span>
+                     <span class="ticketDate">18.11.2016</span>
+                  </div>
+                  <div class="ticket-rightside">
+                     <span class="ticketLvl">Tech lvl 1</span>
+                     <span class="ticketStatus-closed">Closed</span>   
+                  </div>
+               </div>
+            </div>
+         </div>
+      </article>
+      <footer class="site-footer">
+         <div class="footer-column">
+            <h2>Navigation</h2>
+            <ul class="footer-nav">
+               <li><a class="active" href="dashboard.html">Home</a></li>
+               <li><a href="ticket.html">Create ticket</a></li>
+               <li><a class="logout" href="login.html">Log out</a></li>
+            </ul>
+         </div>
+         <div class="footer-column">
+            <div class="analytics">
+               <h4 class="analytics-title">Tickets overview widget</h4>
+               <div class="analytics-chart">
+                  <div class="analytics-colgroup">
+                     <div class="analytics-col">
+                        <div class="analytics-bar green" style="height: 75%;" id="chartClosed"></div>
+                     </div>
+                     <div class="analytics-col">
+                        <div class="analytics-bar red" style="height: 25%;" id="chartOpened"></div>
+                     </div>
+                  </div>
+                  <div class="analytics-legend">
+                     <p> Closed - Open</p>
+                  </div>
+               </div>
+               <div class="analytics-metrics">
+                  <p class="analytics-count" id="totalTickets">5215</p>
+                  <p class="analytics-metric">Closed today <span id="todayClosed">15</span></p>
+                  <p class="analytics-metric">Opened today<span id="todayOpened">20</span></p>
+               </div>
+            </div>
+         </div>
+         <div class="footer-column">
+            <div class="text">
+               <h2>Info</h2>
+               <p><strong>Rajmund IT</strong>&nbsp;<strong>d.o.o.</strong></p>
+               <p>Rajmundova 35, 1000 Ljubljana</p>
+               <p><strong>t:</strong> +386 (1) 5 3333 2221</p>
+               <p><strong>t:</strong> +386 (1) 5 3333 2222</p>
+               <p><strong>f:</strong> +386 (1) 5 3333 2223</p>
+               <p><strong>e:</strong> <a href="mailto:info@rajmund.si">info@it-rajmund.si</a></p>
+               <p>&nbsp;</p>
+               <p>Copyright © 2016 Rajmund IT d.o.o.</p>
+               <p>Vse pravice pridržane</p>
+            </div>
+         </div>
+      </footer>
+   </body>
+</html>

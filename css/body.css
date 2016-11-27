@@ -1,13 +1,313 @@
-/* ELEMENT CMS - GENERAL CSS */
-html, body, input, textarea {font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;}
-table { font-size:1em; border-spacing: 0;  border-collapse: collapse;}
+/* GENERAL CSS */
 
+html,
+body,
+input,
+textarea {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+table {
+    font-size: 1em;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
 /*//////////////////////////////////////////////////////////////////////// global ///////////////////////////////////////////////////////////////////////////////*/
+
 div {
     vertical-align: top;
 }
+a {
+    transition-duration: 0.3s;
+    text-decoration: none;
+}
+/* ------------------------------- header ---------------------------------*/
 
-/* ------------------------------------------------------------------- noga -------------------------------------------------------------*/
-.foot1, .foot2, .foot3 { display:inline-block; width:25%; padding: 15px}
-.foot2 { width:39%;}
-.footer-nav {list-style-type: none; margin-bottom: 5px}
+header.site-header h1 {
+    color: inherit;
+    display: inline-block;
+}
+.img-header {
+    max-width: 100%;
+    height: auto;
+}
+/* ------------------------------- nav -------------------------------------*/
+
+ul.top-nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+ul.top-nav li {
+    float: left;
+}
+ul.top-nav li a {
+    display: inline-block;
+    border-right: 1px solid white;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    font-size: 17px;
+}
+ul.top-nav li a.active {
+    background-color: #008CBA;
+}
+ul.top-nav li a:hover {
+    background-color: #555;
+}
+ul.top-nav li.icon {
+    display: none;
+}
+ul.top-nav li.logout {
+    float: right;
+    border-left: 1px solid white;
+}
+@media screen and (max-width: 680px) {
+    ul.top-nav li:not(:first-child) {
+        display: none;
+    }
+    ul.top-nav li.icon {
+        float: right;
+        display: inline-block;
+    }
+    ul.top-nav.responsive {
+        position: relative;
+    }
+    ul.top-nav.responsive li.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    ul.top-nav.responsive li {
+        float: none;
+        display: inline;
+    }
+    ul.top-nav.responsive li a {
+        display: block;
+        text-align: left;
+    }
+}
+/* ---------------------------- body ------------------------------*/
+
+.centered-content {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.main {
+    padding: 15px;
+}
+.new-line {
+    padding: 10px;
+}
+div.card {
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+}
+div.card-half {
+    width: 48%;
+    display: inline-block;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+}
+@media screen and (max-width: 780px) {
+    div.card-half {
+        width: 100%;
+    }
+}
+label {
+    font-weight: bold;
+}
+div.card-header {
+    color: #6495ED;
+    padding: 10px;
+    border-bottom: 1px solid gray;
+}
+div.card-container {
+    padding: 10px;
+}
+div.question,
+div.ticket-short {
+    padding: 25px;
+    border: 1px solid gray;
+    border-radius: 12px;
+    margin: 10px;
+    box-shadow: #666 1px 1px 10px;
+}
+/* Ticket start*/
+
+div.ticket-short {
+    padding: 15px;
+}
+div.ticket-leftside {
+    text-align: left;
+    width: 65%;
+    display: inline-block;
+}
+div.ticket-rightside {
+    width: 30%;
+    display: inline-block;
+}
+span.ticketId,
+.ticketOwner,
+.ticketDate {
+    text-align: left;
+    margin-right: 15px;
+}
+span.ticketOwner {
+    font-weight: bold;
+}
+span.ticketLvl,
+.ticketStatus,
+.ticketAssigned {
+    text-align: left;
+    margin-right: 15px;
+}
+span.ticketStatus-closed {
+    color: green;
+}
+span.ticketStatus-opened {
+    color: red;
+}
+span.ticketLvl {
+    font-size: 80%;
+    color: #d3d3d3;
+}
+select {
+    width: 400px;
+    text-align-last: center;
+}
+@media screen and (max-width: 414px) {
+    div.ticket-leftside {
+        text-align: left;
+        width: 100%;
+    }
+    div.ticket-rightside {
+        width: 100%;
+    }
+    span.ticketId,
+    .ticketOwner,
+    .ticketDate {
+        text-align: left;
+        margin-right: 15px;
+        display: block;
+    }
+}
+/*Ticket end*/
+
+.button {
+    background-color: #4CAF50;
+    /* Green */
+    
+    border: none;
+    color: white;
+    padding: 1em 2em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+.normal-button,
+.submit-button {
+    background-color: white;
+    color: black;
+    border: 2px solid #008CBA;
+}
+.normal-button:hover,
+.submit-button:hover {
+    background-color: #008CBA;
+    color: white;
+}
+a.header-button,
+a.header-button:visited {
+    color: #6495ED;
+}
+.img-ticket {
+    max-width: 95%;
+    margin: 2%;
+    height: auto;
+}
+#map {
+    height: 400px;
+    width: 100%;
+}
+/* Expanding text */
+
+.more-button {
+    border-style: none;
+    background: none;
+    font-size: 16px;
+    color: blue;
+    margin: 0 0 10px 0;
+}
+.more-button:hover {
+    color: black;
+}
+.grow {
+    transition: height .5s;
+    height: 0;
+    overflow: hidden;
+}
+/* Form */
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-align: center;
+}
+/* ------------------------------ footer -------------------------------*/
+
+footer.site-footer {
+    width: 100%;
+    background-color: #333;
+}
+.footer-column {
+    text-align: center;
+    width: 30.5%;
+    color: #f2f2f2;
+    display: inline-block;
+}
+ul.footer-nav {
+    list-style-type: none;
+    margin: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 95%;
+}
+ul.footer-nav li a {
+    display: block;
+    color: white;
+    padding: 8px 16px;
+}
+ul.footer-nav li a.active {
+    background-color: #008CBA;
+}
+ul.footer-nav li a:hover {
+    background-color: #555;
+    color: white;
+}
+@media screen and (max-width: 900px) {
+    .footer-column {
+        width: 90%;
+        padding: 15px;
+        text-align: center;
+        display: block;
+    }
+    ul.footer-nav {
+        list-style-type: none;
+        margin-right: 100px;
+        padding-right: 100px;
+        width: 95%;
+    }
+}

@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <title>Tech support</title>
+      <meta name="description" content="Spletno programiranje project">
+      <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+      <meta name="author" content="Bogdan Golobič">
+      <link rel="stylesheet" href="css/body.css?v=1.0">
+      <link rel="stylesheet" href="css/analytics-widget.css?v=1.0">
+      <script id="responsiveDesign" src="javascript/responsive.js?v=1.0"></script>
+      <script id="analyticsWidget" src="javascript/analytics-widget.js?v=1.0" defer></script>
+   </head>
+   <body>
+      <header class="site-header">
+         <a href="dashboard.html"><img src="media/logo.svg" alt="logo"/></a>
+         <h1>Rajmund Tech Support</h1>
+      </header>
+      <nav>
+         <ul class="top-nav" id="myTopnav">
+            <li><a href="dashboard.html">Home</a></li>
+            <li><a href="ticket.html">Create ticket</a></li>
+            <li class="logout"><a href="login.html">Log out</a></li>
+            <li class="icon">
+               <a href="javascript:void(0);" style="font-size:15px;" onclick="topnavResponsive()">&#9776;</a>
+            </li>
+         </ul>
+      </nav>
+      <article class="main centered-content">
+         <div class="card">
+            <div class="card-header">
+               <a class="header-button" href="#">
+                  <h2>Ticket information</h2>
+               </a>
+            </div>
+            <div class="card-container">
+               <form method="POST">
+                  <label>Client name and Surname:<input type="text" name="name" placeholder="John Cock" pattern=".* .*" title="Name and Surname" required /></label>
+                  <label>Client telephone number:<input type="tel" name="number" placeholder="+386 51 123 456" pattern="^[0-9]*$" title="Input your telephone number" required /></label>
+                  <label>
+                     Tech support level:
+                     <select id="assignedTo">
+                        <option>1st level support</option>
+                        <option>2nd level support</option>
+                     </select>
+                  </label>
+                  <label>
+                     Status:
+                     <select id="status">
+                        <option>Opened</option>
+                        <option>Closed</option>
+                        <option>Pending</option>
+                        <option>Reopened</option>
+                     </select>
+                  </label>
+                  <label>Problem:<textarea name="comment" required ></textarea></label>
+                  <label>Solution:<textarea name="comment" required ></textarea></label>
+                  <input class="button submit-button" type="submit" value="Update" />
+               </form>
+            </div>
+         </div>
+      </article>
+      <footer class="site-footer">
+         <div class="footer-column">
+            <h2>Navigation</h2>
+            <ul class="footer-nav">
+               <li><a href="dashboard.html">Home</a></li>
+               <li><a href="ticket.html">Create ticket</a></li>
+               <li><a class="logout" href="login.html">Log out</a></li>
+            </ul>
+         </div>
+         <div class="footer-column">
+            <div class="analytics">
+               <h4 class="analytics-title">Tickets overview widget</h4>
+               <div class="analytics-chart">
+                  <div class="analytics-colgroup">
+                     <div class="analytics-col">
+                        <div class="analytics-bar green" style="height: 75%;" id="chartClosed"></div>
+                     </div>
+                     <div class="analytics-col">
+                        <div class="analytics-bar red" style="height: 25%;" id="chartOpened"></div>
+                     </div>
+                  </div>
+                  <div class="analytics-legend">
+                     <p> Closed - Open</p>
+                  </div>
+               </div>
+               <div class="analytics-metrics">
+                  <p class="analytics-count" id="totalTickets">5215</p>
+                  <p class="analytics-metric">Closed today <span id="todayClosed">15</span></p>
+                  <p class="analytics-metric">Opened today<span id="todayOpened">20</span></p>
+               </div>
+            </div>
+         </div>
+         <div class="footer-column">
+            <div class="text">
+               <h2>Info</h2>
+               <p><strong>Rajmund IT</strong>&nbsp;<strong>d.o.o.</strong></p>
+               <p>Rajmundova 35, 1000 Ljubljana</p>
+               <p><strong>t:</strong> +386 (1) 5 3333 2221</p>
+               <p><strong>t:</strong> +386 (1) 5 3333 2222</p>
+               <p><strong>f:</strong> +386 (1) 5 3333 2223</p>
+               <p><strong>e:</strong> <a href="mailto:info@rajmund.si">info@it-rajmund.si</a></p>
+               <p>&nbsp;</p>
+               <p>Copyright © 2016 Rajmund IT d.o.o.</p>
+               <p>Vse pravice pridržane</p>
+            </div>
+         </div>
+      </footer>
+   </body>
+</html>
