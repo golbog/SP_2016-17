@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-/** 
- * Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon
- */
-=======
 /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
->>>>>>> 310fd0a85fc9095bd66ad76ecd5b89059a878b6a
 function topnavResponsive() {
     var x = document.getElementById("myTopnav");
     if (x.className === "top-nav") {
@@ -12,7 +6,6 @@ function topnavResponsive() {
     } else {
         x.className = "top-nav";
     }
-<<<<<<< HEAD
 }
 
 /**
@@ -44,6 +37,4 @@ function initMap() {
         position: uluru,
         map: map
     });
-=======
->>>>>>> 310fd0a85fc9095bd66ad76ecd5b89059a878b6a
 }
